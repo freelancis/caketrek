@@ -13,6 +13,7 @@
 			</ul>
 		</div>
 	</div>
+
 	<div class="row">
 		<?php echo $this->Form->create('User'); ?>
 		<div class="span9 form-horizontal">
@@ -27,12 +28,16 @@
 			</fieldset>
 		</div>
 		<div class="span3">
-			<div class="form-actions">
+			<div>
 				<?php
-					echo $this->Form->input('Badge');
-					echo $this->Form->end(array('label'=>_('Submit'),'class'=>'btn btn-primary'));
+					echo $this->Form->input('Badge',array('label' => __('Badges',true),'type' => 'select', 'multiple' => 'checkbox'));
+					echo $this->Form->end(array('label'=>_('Submit'),'class'=>'btn btn-primary',
+					'div'=>array('class'=>'form-actions')));
 				?>
 			</div>
 		</div>
 	</div>
+	<?php
+		debug($this->request->data);
+	?>
 </div>

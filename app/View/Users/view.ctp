@@ -16,7 +16,7 @@
 		</div>
 	</div>
 	<div class="row">
-		<div class="span12">
+		<div class="span9">
 			<dl>
 				<dt><?php echo __('Id'); ?></dt>
 				<dd>
@@ -49,6 +49,17 @@
 					&nbsp;
 				</dd>
 			</dl>
+		</div>
+		<div class="span3">
+			<?php if (!empty($user['Badge'])): ?>
+				<h2>Badges</h2>
+				<?php foreach ($user['Badge'] as $badge): ?>
+					
+				<span class="label label-info"><?php echo $badge['label']; ?></span>
+				
+				<?php endforeach; ?>
+			<?php endif; ?>
+				
 		</div>
 	</div>
 	<div class="row">
