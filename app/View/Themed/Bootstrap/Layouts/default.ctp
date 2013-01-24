@@ -69,8 +69,10 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 				array('target' => '_blank', 'escape' => false)
 			);
 		?>
-	</footer><!-- /container -->
-	
+		
 	<?php echo $this->element('sql_dump'); ?>
+	</footer><!-- /.container -->
+	
+	
 </body>
 </html>
