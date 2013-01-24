@@ -112,5 +112,14 @@ class User extends AppModel {
 			'insertQuery' => ''
 		)
 	);
+	public $hasOne = array(
+		'Tourist' => array(
+			'className' => 'Tourist',
+			'foreignKey' => 'user_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		)
+	);
 
 }

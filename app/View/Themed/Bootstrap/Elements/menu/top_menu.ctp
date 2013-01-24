@@ -20,6 +20,9 @@
 					<li <?php if($current_page=="badges"){echo'class="active"';} ?>>
 						<?php echo $this->Html->link('BadgesController', array('controller' => 'badges', 'action' => 'index')); ?>
 					</li>
+					<li <?php if($current_page=="tourust"){echo'class="active"';} ?>>
+						<?php echo $this->Html->link('TouristsController', array('controller' => 'tourists', 'action' => 'index')); ?>
+					</li>
 				</ul>
 			</div>
 		</div>

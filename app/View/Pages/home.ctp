@@ -17,7 +17,11 @@ App::uses('Debugger', 'Utility');
 <div class="row">
 	<div class="span9">
 		<h2>Understand <small>what's inside</small></h2>
-		
+		<h3>Pre-baked stuffs</h3>
+			<img src="/img/tourist.png" alt="the tourist has been saved">
+		<h3>Plugins</h3>
+			<h4>Media</h4>
+			<p><a href="https://github.com/Grafikart/CakePHP-Media">CakePHP-Media Plugin</a> has been added. This <a href="http://www.grafikart.fr/tutoriels/cakephp/medias-plugin-301" hreflang="fr" title="screencast">screencast</a> explains how to use it</p>
 		
 		<h2>Code stuffs <small>using CakePHP</small></h2>
 		<p>You will find some </p>
@@ -32,6 +36,8 @@ class PagesController extends AppController {
 	public $theme = "Bootstrap";
 </pre>
 	<p>Use Bootstrap's conventions for naming HTML elements. If you are not a Twitter Bootstrap's expert you can examine <code>/app/View/Users/index.ctp</code> an <?php echo $this->Html->link('read the documentation',array('controllers'=>'pages','action'=>'scaffolding'))?></p>
+
+
 
 	</div>
 	<div class="span3">
