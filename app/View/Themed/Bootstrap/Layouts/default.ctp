@@ -52,26 +52,25 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 <body data-spy="scroll" data-target=".subnav" data-offset="50"
 	class="<?php echo strtolower($this->viewPath); ?>">
 
-	<div id="container">
-		<div id="content">
-			<?php echo $this->Session->flash(); ?>
-			
-			<?php echo $this->element('menu/top_menu'); ?>
+<?php if($this->fetch('header')): ?>
+<div class="masterhead">
+	<?php echo $this->fetch('header'); ?>
+</div>
+<?php endif;?>	
 
-			<?php echo $this->fetch('content'); ?>
-		</div>
-	</div>
-	
-	<footer class="container">
-		<?php echo $this->Html->link(
-				$this->Html->image('cake.power.gif', array('alt' => $cakeDescription, 'border' => '0')),
-				'http://www.cakephp.org/',
-				array('target' => '_blank', 'escape' => false)
-			);
-		?>
+<div id="container" class="container">
+	<?php echo $this->Session->flash(); ?>
+	<?php echo $this->element('menu/top_menu'); ?>
+	<div id="content" class="content">
+		<?php echo $this->fetch('content'); ?>
 		
-	<?php echo $this->element('sql_dump'); ?>
-	</footer><!-- /.container -->
+	</div>
+	<footer class="footer">
+		<?php echo $this->element('sql_dump'); ?>
+	</footer>
+</div><!--.container-->
+	
+
 	
 	
 </body>

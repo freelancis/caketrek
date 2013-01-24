@@ -1,8 +1,7 @@
-<div class="masterhead">
+<?php $this->start('header'); ?>
 	<h1>it works !</h1>
-</div>
+<?php $this->end(); ?>
 
-<div class="container">
 
 <?php
 if (Configure::read('debug') == 0):
@@ -17,14 +16,23 @@ App::uses('Debugger', 'Utility');
 
 <div class="row">
 	<div class="span9">
+		<h2>Understand <small>what's inside</small></h2>
+		
+		
+		<h2>Code stuffs <small>using CakePHP</small></h2>
+		<p>You will find some </p>
+		
+		
 		<h2>Use Bootstrap <small>in your Controller</small></h2>
 		<p>Bootstrap has been installed in <code>/app/View/Themed/Bootstrap</code>, 
-		To activate it in a controller, add</p>
+		To activate it in a controller, add <code>public $theme = "Bootstrap";</code> to your working Controller.</p>
 <pre>
 // in /app/PagesController.php
 class PagesController extends AppController {
 	public $theme = "Bootstrap";
 </pre>
+	<p>Use Bootstrap's conventions for naming HTML elements. If you are not a Twitter Bootstrap's expert you can examine <code>/app/View/Users/index.ctp</code> an <?php echo $this->Html->link('read the documentation',array('controllers'=>'pages','action'=>'scaffolding'))?></p>
+
 	</div>
 	<div class="span3">
 		
@@ -79,6 +87,3 @@ class PagesController extends AppController {
 <hr>
 <?php echo $this->element('check_config'); ?>
 <?php endif; ?>
-
-
-</div><!--.container-->

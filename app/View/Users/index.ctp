@@ -1,4 +1,4 @@
-<div class="container users index">
+<div class="users index">
 	<div class="page-header">
 	  <h1><?php echo __('Users'); ?> <small><?php echo $this->action; ?></small></h1>
 	</div>

@@ -1,4 +1,4 @@
-<div class="container users form">
+<div class="users form">
 	<div class="page-header">
 	  <h1><?php echo __('Users'); ?> <small><?php echo $this->action; ?></small></h1>
 	</div>
