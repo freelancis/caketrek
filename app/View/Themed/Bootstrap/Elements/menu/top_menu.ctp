@@ -15,17 +15,14 @@
 			<?php echo $this->Html->link('caketrek', array('controller'=>'pages','action'=>'home'), array('class'=>'brand')); ?>
 			<div class="nav-collapse">
 				<ul class="nav">
-					<li <?php if($current_page=="index"){echo'class="active"';} ?>>
-						<?php echo $this->Html->link('Scaffolding', array('controller' => 'pages', 'action' => 'scaffolding')); ?>
+					<li <?php if(strtolower($this->viewPath)=="pages"){echo'class="active"';} ?>>
+						<?php echo $this->Html->link('PagesController', array('controller' => 'pages', 'action' => 'index')); ?>
 					</li>
-					<li <?php if($current_page=="base_css"){echo'class="active"';} ?>>
-						<?php echo $this->Html->link('Base CSS', array('controller' => 'pages', 'action' => 'base_css')); ?>
+					<li <?php if(strtolower($this->viewPath)=="users"){echo'class="active"';} ?>>
+						<?php echo $this->Html->link('UsersController', array('controller' => 'users', 'action' => 'index')); ?>
 					</li>
-					<li <?php if($current_page=="components"){echo'class="active"';} ?>>
-						<?php echo $this->Html->link('Components', array('controller' => 'pages', 'action' => 'components')); ?>
-					</li>
-					<li <?php if($current_page=="javascript"){echo'class="active"';} ?>>
-						<?php echo $this->Html->link('Javascript plugins', array('controller' => 'pages', 'action' => 'javascript')); ?>
+					<li <?php if(strtolower($this->viewPath)=="badges"){echo'class="active"';} ?>>
+						<?php echo $this->Html->link('BadgesController', array('controller' => 'badges', 'action' => 'index')); ?>
 					</li>
 				</ul>
 			</div>
