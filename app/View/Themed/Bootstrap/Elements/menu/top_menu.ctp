@@ -1,8 +1,4 @@
-<?php 
-	
-	$current_page = $this->params['action'];
-
-?>
+<?php $current_page = strtolower($this->viewPath); ?>
 
 <div class="navbar navbar-fixed-top">
 	<div class="navbar-inner">
@@ -15,13 +11,13 @@
 			<?php echo $this->Html->link('caketrek', array('controller'=>'pages','action'=>'home'), array('class'=>'brand')); ?>
 			<div class="nav-collapse">
 				<ul class="nav">
-					<li <?php if(strtolower($this->viewPath)=="pages"){echo'class="active"';} ?>>
+					<li <?php if($current_page=="pages"){echo'class="active"';} ?>>
 						<?php echo $this->Html->link('PagesController', array('controller' => 'pages', 'action' => 'index')); ?>
 					</li>
-					<li <?php if(strtolower($this->viewPath)=="users"){echo'class="active"';} ?>>
+					<li <?php if($current_page=="users"){echo'class="active"';} ?>>
 						<?php echo $this->Html->link('UsersController', array('controller' => 'users', 'action' => 'index')); ?>
 					</li>
-					<li <?php if(strtolower($this->viewPath)=="badges"){echo'class="active"';} ?>>
+					<li <?php if($current_page=="badges"){echo'class="active"';} ?>>
 						<?php echo $this->Html->link('BadgesController', array('controller' => 'badges', 'action' => 'index')); ?>
 					</li>
 				</ul>
