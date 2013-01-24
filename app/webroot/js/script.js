@@ -14,5 +14,15 @@ $(document).ready(function(){
 	$('.cake-debug-output > span').bind('click',function(e){
 		$(this).siblings().toggle();
 		e.preventDefault();
+	});
+	$('.pagination > ul > li').each(function(){
+		if($(this).hasClass('current'))
+			$(this).addClass('active');
+			
+		if(!$('a',this).length){
+			var txt = $(this).html(),
+				a  = $("<a>").attr('href','#').html(txt);
+			$(this).empty().append(a);
+		}
 	})
 });

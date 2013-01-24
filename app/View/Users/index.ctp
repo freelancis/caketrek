@@ -13,7 +13,7 @@
 	</div>
 	<div class="row">
 		<div class="span12">
-				<table cellpadding="0" cellspacing="0" class="table table-bordered table-striped">
+			<table cellpadding="0" cellspacing="0" class="table table-bordered table-striped">
 				<tr>
 						<th><?php echo $this->Paginator->sort('id'); ?></th>
 						<th><?php echo $this->Paginator->sort('username'); ?></th>
@@ -23,7 +23,7 @@
 						<th><?php echo $this->Paginator->sort('updated'); ?></th>
 						<th class="actions"><?php echo __('Actions'); ?></th>
 				</tr>
-				<?php
+			<?php
 				foreach ($users as $user): ?>
 				<tr>
 					<td><?php echo h($user['User']['id']); ?>&nbsp;</td>
@@ -40,21 +40,23 @@
 					</td>
 				</tr>
 			<?php endforeach; ?>
-				</table>
-				<div>
-				<?php
+			</table>
+			<div class="pagination">
+				<ul>
+			<?php
+				echo $this->Paginator->prev('«', array('tag'=>'li'), null, array('tag'=>'li','class' => 'prev active'));
+				echo $this->Paginator->numbers(array('separator' => '','tag'=>'li'));
+				echo $this->Paginator->next('»', array('tag'=>'li'), null, array('tag'=>'li','class' => 'next active'));
+			?>
+				</ul>
+			</div>
+			<p>
+			<?php
 				echo $this->Paginator->counter(array(
-				'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
-				));
-				?>	</p>
-
-				<div class="pagination">
-				<?php
-					echo $this->Paginator->prev('< ' . __('previous'), array(), null, array('class' => 'prev disabled'));
-					echo $this->Paginator->numbers(array('separator' => ''));
-					echo $this->Paginator->next(__('next') . ' >', array(), null, array('class' => 'next disabled'));
-				?>
-				</div>
+			'format' => __('Page {:page} of {:pages}, showing {:current} records out of {:count} total, starting on record {:start}, ending on {:end}')
+			));
+			?></p>
+			<?php debug($this->Paginator->params()); ?>
 		</div>
 	</div>
 </div>
