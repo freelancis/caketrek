@@ -7,6 +7,9 @@ App::uses('AppController', 'Controller');
  */
 class UsersController extends AppController {
 
+
+	public $theme = "Bootstrap";
+
 /**
  * index method
  *
