@@ -19,6 +19,12 @@
 		<div class="span9">
 			<h3><?php echo h($user['User']['username']); ?></h3>
 			<p>e-mail: <?php echo h($user['User']['email']); ?></p>
+			<?php if(isset($user['Tourist']['bio'])): ?>
+				<div class="bio"><?php echo h($user['Tourist']['bio']); ?></div>
+				<p><?php echo $this->Html->link(_('edit'),
+					array('controller'=>'tourists', 'action'=>'edit', $user['Tourist']['id']),
+					array('class'=>'btn')); ?></p>
+			<?php endif; ?>
 		</div>
 		<div class="span3">
 			<?php if (!empty($user['Badge'])): ?>
