@@ -12,11 +12,11 @@
 				<span class="icon-bar"></span>
 				<span class="icon-bar"></span>
 			</a>
-			<a class="brand" target="_blank" href="http://twitter.github.com/bootstrap/">Bootstrap</a>
+			<?php echo $this->Html->link('caketrek', array('controller'=>'pages','action'=>'home'), array('class'=>'brand')); ?>
 			<div class="nav-collapse">
 				<ul class="nav">
 					<li <?php if($current_page=="index"){echo'class="active"';} ?>>
-						<?php echo $this->Html->link('Scaffolding', array('controller' => 'pages', 'action' => 'index')); ?>
+						<?php echo $this->Html->link('Scaffolding', array('controller' => 'pages', 'action' => 'scaffolding')); ?>
 					</li>
 					<li <?php if($current_page=="base_css"){echo'class="active"';} ?>>
 						<?php echo $this->Html->link('Base CSS', array('controller' => 'pages', 'action' => 'base_css')); ?>

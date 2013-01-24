@@ -35,6 +35,7 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 		
 		echo $this->Html->css('bootstrap.min');
 		echo $this->Html->css('bootstrap-responsive.min');
+		echo $this->Html->css('main');
 		// docs.css is only for this exapmple, remove for app dev
 		echo $this->Html->css('docs');
 		echo $this->fetch('meta');
@@ -48,13 +49,8 @@ $cakeDescription = __d('cake_dev', 'CakePHP: the rapid development php framework
 	?>
 	
 </head>
-<body data-spy="scroll" data-target=".subnav" data-offset="50">
-
-	<header class="container">
-
-		<h1><?php echo $this->Html->link($cakeDescription, 'http://cakephp.org'); ?></h1>
-
-    </header> <!-- /container -->
+<body data-spy="scroll" data-target=".subnav" data-offset="50"
+	class="<?php echo strtolower($this->viewPath); ?>">
 
 	<div id="container">
 		<div id="content">

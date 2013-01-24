@@ -7,4 +7,6 @@
 // 
 $(document).ready(function(){
 	$('.cake-error').addClass('alert alert-error');
+	$('.notice.success').addClass('alert alert-success');
+	$('.notice').addClass('alert');
 });
