@@ -17,38 +17,8 @@
 	</div>
 	<div class="row">
 		<div class="span9">
-			<dl>
-				<dt><?php echo __('Id'); ?></dt>
-				<dd>
-					<?php echo h($user['User']['id']); ?>
-					&nbsp;
-				</dd>
-				<dt><?php echo __('Username'); ?></dt>
-				<dd>
-					<?php echo h($user['User']['username']); ?>
-					&nbsp;
-				</dd>
-				<dt><?php echo __('Password'); ?></dt>
-				<dd>
-					<?php echo h($user['User']['password']); ?>
-					&nbsp;
-				</dd>
-				<dt><?php echo __('Email'); ?></dt>
-				<dd>
-					<?php echo h($user['User']['email']); ?>
-					&nbsp;
-				</dd>
-				<dt><?php echo __('Created'); ?></dt>
-				<dd>
-					<?php echo h($user['User']['created']); ?>
-					&nbsp;
-				</dd>
-				<dt><?php echo __('Updated'); ?></dt>
-				<dd>
-					<?php echo h($user['User']['updated']); ?>
-					&nbsp;
-				</dd>
-			</dl>
+			<h3><?php echo h($user['User']['username']); ?></h3>
+			<p>e-mail: <?php echo h($user['User']['email']); ?></p>
 		</div>
 		<div class="span3">
 			<?php if (!empty($user['Badge'])): ?>
@@ -62,6 +32,7 @@
 				
 		</div>
 	</div>
+	<hr>
 	<div class="row">
 		<div class="span12">
 			<div class="related">
