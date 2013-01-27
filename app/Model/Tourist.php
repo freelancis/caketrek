@@ -18,7 +18,7 @@ class Tourist extends AppModel {
  * @var string
  */
 public $virtualFields = array(
-	'name' => 'CONCAT(Tourist.first_name, " ", Tourist.last_name)'
+	'full_name' => 'CONCAT(Tourist.first_name, " ", Tourist.last_name)'
 );
 
 /**
@@ -28,7 +28,7 @@ public $virtualFields = array(
  */
 	public $displayField = 'first_name';
 	/*
-		TODO try public $displayField = 'name';
+		TODO try public $displayField = 'full_name';
 	*/
 
 /**

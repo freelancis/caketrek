@@ -35,6 +35,8 @@ class AppSchema extends CakeSchema {
 		'bio' => array('type' => 'text', 'null' => true, 'default' => null, 'collate' => 'utf8_general_ci', 'charset' => 'utf8'),
 		'media_id' => array('type' => 'integer', 'null' => true, 'default' => null),
 		'user_id' => array('type' => 'integer', 'null' => true, 'default' => null),
+		'created' => array('type' => 'datetime', 'null' => true, 'default' => null),
+		'modified' => array('type' => 'datetime', 'null' => true, 'default' => null),
 		'indexes' => array(
 			'PRIMARY' => array('column' => 'id', 'unique' => 1)
 		),
