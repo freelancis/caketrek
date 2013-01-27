@@ -45,4 +45,19 @@ public $virtualFields = array(
 			'order' => ''
 		)
 	);
+
+/**
+ * hasOne associations
+ *
+ * @var array
+ */
+	public $hasOne = array(
+		'Guide' => array(
+			'className' => 'Guide',
+			'foreignKey' => 'tourist_id',
+			'conditions' => '',
+			'fields' => '',
+			'order' => ''
+		)
+	);
 }
