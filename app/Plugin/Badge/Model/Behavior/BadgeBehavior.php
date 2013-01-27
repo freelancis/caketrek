@@ -13,7 +13,9 @@ class BadgeBehavior extends ModelBehavior{
 		 *
 		 * @var array
 		 */
-			$model->$hasAndBelongsToMany['Badge'] = array(
+			$model->hasAndBelongsToMany['Badge'] = array(
+				'associationForeignKey' => 'badge_id',
+				'with' => 'Badge.BadgeObject',
 				'foreignKey' => 'object_id',
 				'joinTable' => 'badges_objects',
 				'conditions' => 'object = "Tourist"',

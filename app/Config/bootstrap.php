@@ -144,6 +144,7 @@ Cache::config('default', array('engine' => 'File'));
  */
 
 CakePlugin::load('Media');
+CakePlugin::load('Badge');
 
 /**
  * You can attach event listeners to the request lifecyle as Dispatcher Filter . By Default CakePHP bundles two filters:
