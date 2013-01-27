@@ -8,7 +8,18 @@
 class BadgeBehavior extends ModelBehavior{
 	
 	function setup($model,$options= array()){
-		# code...
+		/**
+		 * HBTM associations
+		 *
+		 * @var array
+		 */
+			$model->$hasAndBelongsToMany['Badge'] = array(
+				'foreignKey' => 'object_id',
+				'joinTable' => 'badges_objects',
+				'conditions' => 'object = "Tourist"',
+				'fields' => '',
+				'order' => ''
+			);
 	}
 }
 

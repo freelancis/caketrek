@@ -64,21 +64,5 @@ public $virtualFields = array(
 		)
 	);
 
-/**
- * HBTM associations
- *
- * @var array
- */
-	public $hasAndBelongsToMany = array(
-		'Badge' => array(
-			'foreignKey' => 'object_id',
-			'joinTable' => 'badges_objects',
-			'conditions' => 'object = "Tourist"',
-			'fields' => '',
-			'order' => ''
-		)
-	);
-
-
 	
 }
