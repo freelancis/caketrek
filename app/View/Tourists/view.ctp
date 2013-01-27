@@ -6,6 +6,16 @@
 			<?php echo h($tourist['Tourist']['id']); ?>
 			&nbsp;
 		</dd>
+		<dt><?php echo __('First Name'); ?></dt>
+		<dd>
+			<?php echo h($tourist['Tourist']['first_name']); ?>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('Last Name'); ?></dt>
+		<dd>
+			<?php echo h($tourist['Tourist']['last_name']); ?>
+			&nbsp;
+		</dd>
 		<dt><?php echo __('Bio'); ?></dt>
 		<dd>
 			<?php echo h($tourist['Tourist']['bio']); ?>
@@ -19,6 +29,16 @@
 		<dt><?php echo __('User'); ?></dt>
 		<dd>
 			<?php echo $this->Html->link($tourist['User']['username'], array('controller' => 'users', 'action' => 'view', $tourist['User']['id'])); ?>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('Created'); ?></dt>
+		<dd>
+			<?php echo h($tourist['Tourist']['created']); ?>
+			&nbsp;
+		</dd>
+		<dt><?php echo __('Modified'); ?></dt>
+		<dd>
+			<?php echo h($tourist['Tourist']['modified']); ?>
 			&nbsp;
 		</dd>
 	</dl>

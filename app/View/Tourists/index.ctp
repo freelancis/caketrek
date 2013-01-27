@@ -3,20 +3,26 @@
 	<table cellpadding="0" cellspacing="0">
 	<tr>
 			<th><?php echo $this->Paginator->sort('id'); ?></th>
+			<th><?php echo $this->Paginator->sort('last_name'); ?></th>
 			<th><?php echo $this->Paginator->sort('bio'); ?></th>
 			<th><?php echo $this->Paginator->sort('media_id'); ?></th>
 			<th><?php echo $this->Paginator->sort('user_id'); ?></th>
+			<th><?php echo $this->Paginator->sort('created'); ?></th>
+			<th><?php echo $this->Paginator->sort('modified'); ?></th>
 			<th class="actions"><?php echo __('Actions'); ?></th>
 	</tr>
 	<?php
 	foreach ($tourists as $tourist): ?>
 	<tr>
 		<td><?php echo h($tourist['Tourist']['id']); ?>&nbsp;</td>
+		<td><?php echo h($tourist['Tourist']['full_name']); ?>&nbsp;</td>
 		<td><?php echo h($tourist['Tourist']['bio']); ?>&nbsp;</td>
 		<td><?php echo h($tourist['Tourist']['media_id']); ?>&nbsp;</td>
 		<td>
 			<?php echo $this->Html->link($tourist['User']['username'], array('controller' => 'users', 'action' => 'view', $tourist['User']['id'])); ?>
 		</td>
+		<td><?php echo h($tourist['Tourist']['created']); ?>&nbsp;</td>
+		<td><?php echo h($tourist['Tourist']['modified']); ?>&nbsp;</td>
 		<td class="actions">
 			<?php echo $this->Html->link(__('View'), array('action' => 'view', $tourist['Tourist']['id'])); ?>
 			<?php echo $this->Html->link(__('Edit'), array('action' => 'edit', $tourist['Tourist']['id'])); ?>
