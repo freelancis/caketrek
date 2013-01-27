@@ -10,14 +10,7 @@ class Tourist extends AppModel {
 
 	//The Associations below have been created with all possible keys, those that are not needed can be removed
 
-/**
- * Display field
- *
- * @var string
- */
-	public $displayField = 'first_name';
-	
-	
+
 /**
  * Display field
  * 
@@ -27,6 +20,17 @@ class Tourist extends AppModel {
 public $virtualFields = array(
 	'name' => 'CONCAT(Tourist.first_name, " ", Tourist.last_name)'
 );
+
+/**
+ * Display field
+ *
+ * @var string
+ */
+	public $displayField = 'first_name';
+	/*
+		TODO try public $displayField = 'name';
+	*/
+
 /**
  * belongsTo associations
  *
