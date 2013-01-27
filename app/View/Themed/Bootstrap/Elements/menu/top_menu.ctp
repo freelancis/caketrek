@@ -20,9 +20,13 @@
 					<li <?php if($current_page=="badges"){echo'class="active"';} ?>>
 						<?php echo $this->Html->link('BadgesController', array('controller' => 'badges', 'action' => 'index')); ?>
 					</li>
-					<li <?php if($current_page=="tourust"){echo'class="active"';} ?>>
+					<li <?php if($current_page=="tourists"){echo'class="active"';} ?>>
 						<?php echo $this->Html->link('TouristsController', array('controller' => 'tourists', 'action' => 'index')); ?>
 					</li>
+					<li <?php if($current_page=="guides"){echo'class="active"';} ?>>
+						<?php echo $this->Html->link('GuidesController', array('controller' => 'guides', 'action' => 'index')); ?>
+					</li>
+
 				</ul>
 			</div>
 		</div>
