@@ -31,6 +31,9 @@ public $virtualFields = array(
 		TODO try public $displayField = 'full_name';
 	*/
 
+	public $actsAs = array('Containable');
+	
+
 /**
  * belongsTo associations
  *
@@ -60,4 +63,22 @@ public $virtualFields = array(
 			'order' => ''
 		)
 	);
+
+/**
+ * HBTM associations
+ *
+ * @var array
+ */
+	public $hasAndBelongsToMany = array(
+		'Badge' => array(
+			'foreignKey' => 'object_id',
+			'joinTable' => 'badges_objects',
+			'conditions' => 'object = "Tourist"',
+			'fields' => '',
+			'order' => ''
+		)
+	);
+
+
+	
 }
