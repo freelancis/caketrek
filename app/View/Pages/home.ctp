@@ -17,6 +17,31 @@ App::uses('Debugger', 'Utility');
 <div class="row">
 	<div class="span9">
 		<h2>Understand <small>what's inside</small></h2>
+		<h3>About the project</h3>
+		<p>What is this project <?php echo $this->Html->link('about',array('action'=>'about')) ?> ? What is a <?php echo $this->Html->link('trek',array('action'=>'trek')) ?> ?</p>
+		<div class="row">
+			<div class="span3">
+				<ul>
+					<li>Users</li>
+					<li>Tourists</li>
+					<li>Guides</li>
+				</ul>
+			</div>
+			<div class="span3">
+				<ul>
+					<li>Journeys</li>
+					<li>Tracks</li>
+					<li>Zones</li>
+				</ul>
+			</div>
+			<div class="span3">
+				<ul>
+					<li>Badges</li>
+					<li>Medias</li>
+				</ul>
+			</div>
+
+		</div>
 		<h3>Pre-baked stuffs</h3>
 			<img src="/img/tourist.png" alt="the tourist has been saved">
 		<h3>Plugins</h3>
