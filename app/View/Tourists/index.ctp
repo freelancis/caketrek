@@ -1,5 +1,3 @@
-<?php debug($tourists); ?>
-
 <div class="tourists index">
 	<h2><?php echo __('Tourists'); ?></h2>
 	<table cellpadding="0" cellspacing="0">

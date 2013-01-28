@@ -68,8 +68,7 @@ class TouristsController extends AppController {
 	public function edit($id = null) {
 
 		$this->Tourist->recursive = 0;
-		$this->Tourist->contain('Guide');
-		$this->Tourist->contain('Badge');
+		$this->Tourist->contain('User','Guide','Badge');
 		
 		$this->Tourist->id = $id;
 		if (!$this->Tourist->exists()) {
