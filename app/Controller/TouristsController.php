@@ -14,6 +14,7 @@ class TouristsController extends AppController {
  */
 	public function index() {
 		$this->Tourist->recursive = 0;
+		$this->Tourist->contain('User','Guide','Badge');
 		$this->set('tourists', $this->paginate());
 	}
 
@@ -25,17 +26,16 @@ class TouristsController extends AppController {
  * @return void
  */
 	public function view($id = null) {
-		$this->Tourist->recursive = 0;
-		$this->Tourist->contain('Guide');
-		$this->Tourist->contain('Badge');
 		$this->Tourist->id = $id;
+		$this->Tourist->recursive = 0;
+		$this->Tourist->contain('User','Guide','Badge');
 		if (!$this->Tourist->exists()) {
 			throw new NotFoundException(__('Invalid tourist'));
 		}
-		$tourist = $this->Tourist->find('first', $id);
+		$tourist = $this->Tourist->find('first', array(
+			'conditions' => array('Tourist.id' => $id)
+		));
 		$this->set('tourist', $tourist);
-		
-		debug($tourist);
 		
 	}
 
@@ -66,6 +66,11 @@ class TouristsController extends AppController {
  * @return void
  */
 	public function edit($id = null) {
+
+		$this->Tourist->recursive = 0;
+		$this->Tourist->contain('Guide');
+		$this->Tourist->contain('Badge');
+		
 		$this->Tourist->id = $id;
 		if (!$this->Tourist->exists()) {
 			throw new NotFoundException(__('Invalid tourist'));
@@ -80,8 +85,10 @@ class TouristsController extends AppController {
 		} else {
 			$this->request->data = $this->Tourist->read(null, $id);
 		}
+		$badges = $this->Tourist->Badge->find('list');
+
 		$users = $this->Tourist->User->find('list');
-		$this->set(compact('users'));
+		$this->set(compact('users','badges'));
 	}
 
 /**

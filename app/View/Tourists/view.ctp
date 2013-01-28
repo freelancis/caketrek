@@ -1,3 +1,4 @@
+<?php debug($tourist); ?>
 <div class="tourists view">
 <h2><?php  echo __('Tourist'); ?></h2>
 	<dl>
@@ -42,6 +43,16 @@
 			&nbsp;
 		</dd>
 	</dl>
+	<div>
+		Badges :
+	<?php
+	for ($i=0; $i < count($tourist['Badge']); $i++) { 
+		echo $tourist['Badge'][$i]['label'].',';
+	}
+	?>
+
+	</div>
+	
 </div>
 <div class="actions">
 	<h3><?php echo __('Actions'); ?></h3>
