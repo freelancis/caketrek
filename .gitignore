@@ -5,7 +5,9 @@ app/tmp/*
 app/[Cc]onfig/core.php
 app/[Cc]onfig/database.php
 !empty
-/app/tmp/cache/*
+app/tmp/*
+/app/tmp/*
+app/tmp/cache/*
 app/tmp/cache/persistent/myapp_cake_core_file_map
 
 app/tmp/cache/persistent/myapp_cake_core_file_map

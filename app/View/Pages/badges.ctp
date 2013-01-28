@@ -1,5 +1,6 @@
 <h1>Badges</h1>
-Can be applied on
+<h2>What are badges</h2>
+<p>Badges are Rewards, they can be applied on Tourists, Tracks, Guides, Journeys... and in fact whatever object</p>
 <ul>
 	<li>Tracks : 
 		<ul>
@@ -10,3 +11,17 @@ Can be applied on
 		</ul>
 	</li>
 </ul>
+
+
+<h2>Display a badge</h2>
+<p>Badge is a plugin in <code>/app/Plugin/Badge/</p> and has two Models : <code>Badge</code> and <code>BadgeObject</code>.</p>
+
+<p><b>Badge</b> is a simple model</p>
+<p><b>BadgeObject</b> allows you to connect a badge to whatever object</p>
+<p><b>BadgeBehavior</b> uses the BadgeObject as multi-relator</p>
+
+<h2>How to earn a badge ?</h2>
+<p>Badges are automatically applied using strange rules. Bad</p>
+
+
+
