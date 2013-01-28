@@ -14,7 +14,7 @@
 
 
 <h2>Display a badge</h2>
-<p>Badge is a plugin in <code>/app/Plugin/Badge/</p> and has two Models : <code>Badge</code> and <code>BadgeObject</code>.</p>
+<p>Badge is a plugin in <code>/app/Plugin/Badge/</code> and has two Models : <code>Badge</code> and <code>BadgeObject</code>.</p>
 
 <p><b>Badge</b> is a simple model</p>
 <p><b>BadgeObject</b> allows you to connect a badge to whatever object</p>

@@ -36,7 +36,7 @@ App::uses('Debugger', 'Utility');
 			</div>
 			<div class="span3">
 				<ul>
-					<li>Badges</li>
+					<li><?php echo $this->Html->link('Badges',array('controller'=>'pages','action'=>'badges'))?></li>
 					<li>Medias</li>
 				</ul>
 			</div>
