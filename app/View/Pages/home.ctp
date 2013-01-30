@@ -11,14 +11,15 @@ App::uses('Debugger', 'Utility');
 ?>
 
 <div class="hero-unit">
-	<p>Welcome to this pre-packaged CakePHP install.</p>
+	<p>Welcome to this pre-packaged CakePHP install You must be logged in to access this application.</p>
+	<p><?php echo $this->Html->link('Create an account',array('controller'=>'users','action'=>'add'), array('class'=>'btn btn-primary btn-large'))?></p>
 </div>
 
 <div class="row">
 	<div class="span9">
 		<h2>Understand <small>what's inside</small></h2>
 		<h3>Pre-baked stuffs</h3>
-			<img src="/img/tourist.png" alt="the tourist has been saved">
+			<?php echo $this->Html->image("tourist.png", array("alt" => "Tourist")); ?>
 		<h3>Plugins</h3>
 			<h4>Media</h4>
 			<p><a href="https://github.com/Grafikart/CakePHP-Media">CakePHP-Media Plugin</a> has been added. This <a href="http://www.grafikart.fr/tutoriels/cakephp/medias-plugin-301" hreflang="fr" title="screencast">screencast</a> explains how to use it</p>

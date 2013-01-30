@@ -31,7 +31,7 @@
 			<div>
 				<?php
 					echo $this->Form->input('Badge',array('label' => __('Badges',true),'type' => 'select', 'multiple' => 'checkbox'));
-					echo $this->Form->end(array('label'=>_('Submit'),'class'=>'btn btn-primary',
+					echo $this->Form->end(array('label'=>__('Submit'),'class'=>'btn btn-primary',
 					'div'=>array('class'=>'form-actions')));
 				?>
 			</div>
